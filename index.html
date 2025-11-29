@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1 class="title">Weather</h1>
+      <div class="hdr-controls">
+        <button id="themeBtn" class="ctrl">Theme</button>
+        <button id="unitBtn" class="ctrl">°C</button>
+      </div>
+    </header>
+
+    <section class="search card">
+      <input id="cityInput" placeholder="Cari kota... (cth: Jakarta)" />
+      <div id="suggestions" class="suggestions"></div>
+      <div class="actions">
+        <button id="searchBtn" class="btn">Cari</button>
+        <button id="geoBtn" class="btn subtle">Lokasi</button>
+        <button id="refreshBtn" class="btn subtle">Refresh</button>
+        <button id="samplesBtn" class="btn subtle">Try samples</button>
+      </div>
+    </section>
+
+    <section id="current" class="card current">
+      <p class="small">Tekan "Try samples" untuk tes cepat.</p>
+    </section>
+
+    <section class="card forecast">
+      <h2 class="small">5-Day Forecast</h2>
+      <div id="forecastGrid" class="grid"></div>
+    </section>
+
+    <section class="card favs">
+      <h3 class="small">Favorites</h3>
+      <div id="favorites" class="fav-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

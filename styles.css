@@ -1,0 +1,45 @@
+:root{
+  --bg:#fbfbfc;
+  --card:#fff;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:28px auto;padding:18px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.title{margin:0;font-size:20px}
+.hdr-controls{display:flex;gap:8px}
+.ctrl{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+.card{background:var(--card);padding:12px;border-radius:var(--radius);margin-top:14px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.search{display:flex;flex-direction:column;gap:8px}
+#cityInput{padding:10px;border-radius:8px;border:1px solid #e6e6e9;font-size:15px}
+.suggestions{position:relative}
+.suggestions .item{background:var(--card);padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.04);cursor:pointer;margin-top:6px}
+
+.actions{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.btn{background:var(--accent);color:white;border:none;padding:8px 10px;border-radius:8px;cursor:pointer}
+.subtle{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12)}
+
+.current{display:flex;align-items:center;gap:12px}
+.current .info{flex:1}
+.temp{font-size:34px;font-weight:700;margin:6px 0}
+.small{color:var(--muted);margin:6px 0 0;font-size:13px}
+
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.grid .cell{padding:10px;border-radius:8px;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
+.fav-list{display:flex;gap:8px;flex-wrap:wrap}
+.fav-pill{padding:8px 10px;border-radius:999px;background:rgba(37,99,235,0.08);cursor:pointer;font-size:14px}
+
+@media(max-width:700px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .current{flex-direction:column;align-items:flex-start}
+}
+
+/* dark */
+body.dark{
+  --bg:#0b1220; --card:#0f1724; --text:#e6eef8; --muted:#9aa4b2; --accent:#3b82f6;
+}
